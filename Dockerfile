@@ -30,6 +30,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # install Jupyter via pip
 RUN pip3 install notebook
 
+RUN python2 -m pip install ipykernel
+RUN python2 -m ipykernel install # register Python 2 kernel
+
 # install ipywidgets
 RUN pip3 install ipywidgets  && \
     jupyter nbextension enable --sys-prefix --py widgetsnbextension
