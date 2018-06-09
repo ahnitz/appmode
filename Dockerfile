@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # install Jupyter via pip
 RUN pip2 install jupyter-notebook
+RUN pip2 install notebook
 
 # install ipywidgets
 RUN pip2 install ipywidgets  && \
